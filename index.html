@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.container {
+    border: 4px solid blue;
+    width: 400px;
+}
+h1 {
+    text-align: center;
+}
+.interno {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+button {
+    margin-top: 5px;
+    color: white;
+    background-color: blue;
+    border-radius: 10px;
+    padding: 10px;
+}
+button:hover {
+    background-color: gray;
+    color: black;
+    transition-duration: 1s;
+    
+}
+#btnApagar {
+    background-color: red;
+}
+#btnApagar:hover {
+    background-color: gray
+}
+p {
+    margin: 0px;
+    font-size: 20px;
+}
+li {
+    margin: -10px;
+    font-size: 20px;
+}
+label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="interno">
+            <h1 id="titulo">CARTÃO DE VISITA</h1>
+            <ol id="list">
+            </ol>
+            <label>Digite o número da pessoa: </label>
+            <input type="number" max="3" min="1" id="nrOrdem" name="NrOrdem" required>
+            <button id="btnDpessoais" onclick="insDadosPes()";>DADOS PESSOAIS</button>
+            <button id="btnApagar" onclick="apagaDados()";>APAGAR</button>
+            <p id="dPes"></p>
+            <p id="dProf"></p>
+        </div>
+    </div>
+
+
+<script>
+   pessoaNome = ['Leonardo','Marcos','João'];
+    pessoaProf = ['Desenvolvedor','Analista de Sistemas','Bancário'];
+    for (let i = 0 ; i < (pessoaNome.length) ; i++) {
+        let a = document.getElementById('list')
+        a.innerHTML += `<li>${pessoaNome[i]}</li><br>`
+    }
+
+function insDadosPes() {
+    var x = document.getElementById('nrOrdem').value;
+    if (x - 1 >= 0) {
+    escrever('dPes',pessoaNome[x - 1]);
+    escrever('dProf',pessoaProf[x - 1]);
+    }
+    else {
+    apagaDados();
+}
+}
+function apagaDados() {
+    document.getElementById("dPes").innerHTML = "";
+    document.getElementById('dProf').innerHTML = "";
+}
+function escrever(id, texto) {
+    
+    switch (id) {
+        case "dPes":
+        document.getElementById(id).innerHTML = "Nome: " + texto;
+        break;
+        case "dProf":
+        document.getElementById(id).innerHTML = "Profissão: " + texto;
+        break;
+    }
+}
+
+</script>
+</body>
+</html>
