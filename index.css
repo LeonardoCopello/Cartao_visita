@@ -1,0 +1,123 @@
+:root {
+    --dark_blue: blue;
+    --red: red;
+    --white: white;
+    --gray:gray;
+    --green: green;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    border: 4px solid var(--dark_blue);
+    width: 400px;
+}
+h1 {
+    text-align: center;
+}
+.interno {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+button {
+    margin-top: 5px;
+    color: var(--white);
+    background-color: var(--dark_blue);
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+}
+button:hover {
+    background-color: var(--gray);
+    color: var(--black);
+    transition-duration: 1s;
+    
+}
+#btnApagar {
+    background-color: var(--red);
+}
+#btnApagar:hover {
+    background-color: var(--gray);
+}
+#btnAddNovaPessoa:hover {
+    background-color: var(--gray);
+}
+p {
+    margin: 0px;
+    font-size: 20px;
+}
+li {
+    margin: -10px;
+    font-size: 20px;
+}
+label {
+    font-size: 18px;
+    font-weight: bold;
+}
+input {
+    margin-top: 10px;
+    width: 100%;
+    border: 0px;
+    padding: 3px;
+    border-bottom: 1px solid var(--gray)
+}
+input:focus {
+    outline: none;
+}
+
+#btnAddNovaPessoa {
+    background-color: var(--green);
+    border: none;
+    margin-top: 10px;
+}
+
+.togglers {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+.brown {
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+    background-color: brown;
+}
+.yellow {
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+    background-color: yellow
+}
+.green {
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+    background-color: green
+}
+.brown:hover, .yellow:hover, .green:hover {
+    opacity: .5;
+    transition: 2s;
+    transform:scale(1.2)
+}
+
+
+.change-brown {
+    --dark_blue: rgb(80, 32, 0);
+    --red: rgb(196, 78, 0);
+    --white: white;
+    --gray:rgb(255, 183, 134);
+    --green: rgb(59, 22, 1);
+}
+.change-yellow {
+    --dark_blue: rgb(253, 243, 100);
+    --red: rgb(255, 251, 35);
+    --white: white;
+    --gray:rgb(248, 246, 125);
+    --green: rgb(215, 255, 17);
+}
